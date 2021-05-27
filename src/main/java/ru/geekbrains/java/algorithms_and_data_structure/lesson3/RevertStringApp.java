@@ -13,15 +13,20 @@ public class RevertStringApp {
         MyArrayListStack stack = new MyArrayListStack();
 
         try {
-        while (true) {
-            int i;
             while (true) {
-                if (!((i = in.read()) != -1)) break;
+                int i;
+                while (((i = in.read()) != -1)) {
+                    //if (i = (int)'') return;;
+                    if (i == (int)'\n') break;
 
-                stack.push(i);
-            }
-            while (!stack.isEmpty()){
-                System.out.print(stack.pop());
+                    //System.out.print((char)i);
+
+                    stack.push((char)i);
+                }
+                while (!stack.isEmpty()) {
+                    System.out.print(stack.pop());
+                }
+                System.out.println();
             }
         }
         catch (IOException e) {
