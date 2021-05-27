@@ -9,10 +9,10 @@ import java.io.InputStreamReader;
 public class RevertStringApp {
     public static void run(){
        // BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        InputStreamReader in = new InputStreamReader(System.in);
+
         MyArrayListStack stack = new MyArrayListStack();
 
-        try {
+        try (InputStreamReader in = new InputStreamReader(System.in)){
             while (true) {
                 int i;
                 while (((i = in.read()) != -1)) {
