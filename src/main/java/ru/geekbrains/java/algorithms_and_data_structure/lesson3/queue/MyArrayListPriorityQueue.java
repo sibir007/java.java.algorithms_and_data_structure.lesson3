@@ -21,7 +21,7 @@ public class MyArrayListPriorityQueue<T extends Comparable<? super T>> implement
         int index = 0;
         Iterator<T> iterator = this.arrayList.iterator();
         while (iterator.hasNext()){
-            if (iterator.next().compareTo(item) <= 0) break;
+            if (iterator.next().compareTo(item) >= 0) break;
             index++;
         }
         return index;

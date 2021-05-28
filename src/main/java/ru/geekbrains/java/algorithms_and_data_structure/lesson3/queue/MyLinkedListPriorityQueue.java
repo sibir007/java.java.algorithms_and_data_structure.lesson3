@@ -21,7 +21,7 @@ public class MyLinkedListPriorityQueue<T extends Comparable<? super T>> implemen
         int index = 0;
         Iterator<T> iterator = this.linkedList.iterator();
         while (iterator.hasNext()){
-            if (iterator.next().compareTo(item) <= 0) break;
+            if (iterator.next().compareTo(item) >= 0) break;
             index++;
         }
         return index;
